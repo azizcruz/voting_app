@@ -38,7 +38,6 @@ router.get('/logout', function(req, res){
   req.logout();
   res.render('index', {logout: "You logged out"});
 });
-
 // POST-----> 
 
 // Serialize user.
