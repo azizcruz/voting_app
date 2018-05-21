@@ -1,0 +1,31 @@
+<div class="header-text">
+    <h3>Pick what do you want to do</h3>
+    {{#if logout}}
+    <h5 class="center red-text">{{logout}}</h5>
+    {{/if}}
+    <div>
+        <div class="row">
+            <div class="col s12 m4">
+                <a href="/polls/allPolls">
+                    <div class="action z-depth-4 black-text" id="action1">
+                        Polls
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a href="/users/signup">
+                    <div class="action z-depth-4 black-text" id="action2">
+                        Sign Up
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a href="/users/signin">
+                    <div class="action z-depth-4 black-text" id="action3">
+                        Sign In
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

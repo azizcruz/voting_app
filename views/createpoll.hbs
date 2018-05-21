@@ -1,0 +1,34 @@
+<h3 class="center">Create a poll</h3>
+<div id="create_poll">
+    <form action="/polls/createPoll" method="POST">
+        {{#if success}}
+            <p class="success">{{ success }}</p>
+        {{/if}}
+        {{#if errors}}
+            <p class="errors">{{ errors }}</p>
+        {{/if}}
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="pollquest" name="pollquest" type="text" class="validate">
+                <label for="pollquest">Poll Question</label>
+            </div>
+        </div>
+        <h5 class="">Choices:</h5>
+        <div id="choices">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="pollchoice1" name="pollchoice1" type="text" class="validate">
+                    <label for="pollchoice1">Poll Choice 1</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="pollchoice2" name="pollchoice2" type="text" class="validate">
+                    <label for="pollchoice2">Poll Choice 2</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="center" id="add_choice">Add choice +</div>
+        <br>
+        <button type="submit" class="btn grey">Create</button>
+    </form>
+</div>

@@ -1,0 +1,43 @@
+<h3 class="center">Sign Up</h3>
+        {{#if success}}
+            <h4 class="success">{{success}}</h4>
+        {{/if}}
+         {{#if error}}
+            <div class="fail">{{error}}</div>
+        {{/if}}
+
+
+        {{#if errors}}
+            {{#each errors}}
+        <div class="errors"> * {{this.msg}}</div>
+            {{/each}}
+        {{/if}}
+        
+<div id="signup">
+    <form action="/users/signup" method="POST">
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Full Name" id="name" name="name" type="text" class="validate">
+            </div>
+        </div>
+        <div class="row">
+            <div id="checkEmail">Hello</div>
+            <div class="input-field col s12">
+                <input placeholder="Email" id="email" name="email" type="email" class="validate">
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Password" id="password1" name="pass1" type="password" class="validate">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Re-Password" id="password2" name="pass2" type="password" class="validate">
+            </div>
+        </div>
+        <button type="submit" class="btn grey">Sign Up</button>
+    </form>
+</div>

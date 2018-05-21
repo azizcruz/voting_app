@@ -1,0 +1,29 @@
+<h3 class="center">Profile</h3>
+{{#if msg}}
+            <p class="success">{{ msg }}</p>
+{{/if}}
+<div id="profile">
+    <form action="#" method="POST">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="name" name="name" type="text" class="validate" value="{{#if email}}{{name}}{{/if}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" name="email" type="email" class="validate" value="{{#if email}}{{email}}{{/if}}">
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="input-field col s12">
+                <input id="password1" name="pass1" type="password" class="validate">
+                <label for="password1">Password</label>
+            </div>
+        </div>
+    </form>
+    <a href="/users/logout" class="btn red white-text">Logout</a>
+    <a href="/polls/allpolls/{{userID}}" class="btn blue lighten-1 white-text">My Polls</a>
+    <a href="/polls/createPoll" class="btn green lighten-1 white-text">Create Poll</a>
+    
+</div>

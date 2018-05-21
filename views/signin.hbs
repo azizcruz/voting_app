@@ -1,0 +1,23 @@
+<h3 class="center">Sign In</h3>
+{{#if message}}
+   <p class="red-text" id="message">{{ message }}</p>   
+{{/if}}
+<div id="signin">
+    <form action="/users/signin" method="POST">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" name="email" type="email" class="validate" autocomplete="off">
+                <label for="email">Email</label>
+            </div>
+        </div>
+
+         <div class="row">
+            <div class="input-field col s12">
+                <input id="password" name="pass" type="password" class="validate" autocomplete="off">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <p class="grey-text">not registered yet? then please<a href="/users/signup"> Sign up</a></p>
+        <button type="submit" class="btn grey">Sign In</button>
+    </form>
+</div>
