@@ -64,6 +64,18 @@ router.get("/allpolls/:userID", (req, res, next) => {
   
 })
 
+// Get poll data.
+router.get("/getData", (req, res, next) => {
+  var pollId = req.query.pollID
+
+  Poll.find({_id: pollId}, (err, result) => {
+    if(err) throw err
+
+    res.json({data: result})
+  })
+  
+})
+
 
 // DELETE poll. 
 router.get('/deletePoll/:pollId', isLoggedIn,(req, res, next) => {
